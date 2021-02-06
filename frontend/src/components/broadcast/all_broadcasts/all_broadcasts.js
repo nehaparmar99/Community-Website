@@ -1,5 +1,5 @@
 import React from "react";
-import "./all_broadcasts.css";
+import styles from "./all_broadcasts.module.css";
 import Card from "./card/card";
 function AllBroadcasts() {
   let str2 = `Hola learners🙋🏻‍♀️🙋🏻‍♂️
@@ -42,14 +42,14 @@ function AllBroadcasts() {
     ["Crio Winter Of Doing ", str1],
   ];
   return (
-    <main>
-      <div id="hero">
-        <div className="motive">
-          <h1 className="carousel-head">Broadcasts</h1>
-          <div className="dash"></div>
+    <main className={styles.main}>
+      <div className={styles.hero}>
+        <div className={styles.motive}>
+          <h1 className={styles.carouselhead}>Broadcasts</h1>
+          <div className={styles.dash}></div>
         </div>
       </div>
-      <div id="allCards">
+      <div className={styles.allCards}>
         {arrayCards.map((element, i) => {
           return <Card project={element} key={`card-${i}`} />;
         })}

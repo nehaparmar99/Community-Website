@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-import "./Carousel.css";
+import styles from "./Carousel.module.css";
 import "../../home/motive/motive.css";
 import Modals from "./Modal/Modals";
 
@@ -81,20 +81,20 @@ export default function Owl(props) {
   return (
     <React.Fragment>
       <Modals open={open} handleClose={handleClose} data={data} />
-      <div className="slider-div">
-        <div className="motive">
-          <h1 className="carousel-head">{props.head}</h1>
-          <div className="dash"></div>
+      <div className={styles.sliderdiv}>
+        <div className={styles.motive}>
+          <h1 className={styles.carouselhead}>{props.head}</h1>
+          <div className={styles.dash}></div>
         </div>
         <OwlCarousel
-          className="owl-theme slide "
+          className={styles.owltheme}
           {...state.options}
           autoplay={true}
           responsiveClass={true}
           nav={false}
         >
           <div
-            className="slide-card"
+            className={styles.slidecard}
             onClick={() =>
               handleOpen(
                 str1,
@@ -103,11 +103,11 @@ export default function Owl(props) {
               )
             }
           >
-            <h3 className="card-head"> Crio Winter Of Doing </h3>
-            <div className="card-text">{str1.substring(0, 600)}...</div>
+            <h3 className={styles.cardhead}> Crio Winter Of Doing </h3>
+            <div className={styles.cardtext}>{str1.substring(0, 600)}...</div>
           </div>
           <div
-            className="slide-card"
+            className={styles.slidecard}
             onClick={() =>
               handleOpen(
                 str2,
@@ -116,11 +116,11 @@ export default function Owl(props) {
               )
             }
           >
-            <h3 className="card-head"> Private AI Series </h3>
-            <div className="card-text">{str2.substring(0, 600)}...</div>
+            <h3 className={styles.cardhead}> Private AI Series </h3>
+            <div className={styles.cardtext}>{str2.substring(0, 600)}...</div>
           </div>
           <div
-            className="slide-card"
+            className={styles.slidecard}
             onClick={() =>
               handleOpen(
                 str1,
@@ -129,11 +129,11 @@ export default function Owl(props) {
               )
             }
           >
-            <h3 className="card-head"> Crio Winter Of Doing </h3>
-            <div className="card-text">{str1.substring(0, 600)}...</div>
+            <h3 className={styles.cardhead}> Crio Winter Of Doing </h3>
+            <div className={styles.cardtext}>{str1.substring(0, 600)}...</div>
           </div>
           <div
-            className="slide-card"
+            className={styles.slidecard}
             onClick={() =>
               handleOpen(
                 str2,
@@ -142,11 +142,11 @@ export default function Owl(props) {
               )
             }
           >
-            <h3 className="card-head"> Private AI Series </h3>
-            <div className="card-text">{str2.substring(0, 600)}...</div>
+            <h3 className={styles.cardhead}> Private AI Series </h3>
+            <div className={styles.cardtext}>{str2.substring(0, 600)}...</div>
           </div>
           <div
-            className="slide-card"
+            className={styles.slidecard}
             onClick={() =>
               handleOpen(
                 str1,
@@ -155,11 +155,11 @@ export default function Owl(props) {
               )
             }
           >
-            <h3 className="card-head"> Crio Winter Of Doing </h3>
-            <div className="card-text">{str1.substring(0, 600)}...</div>
+            <h3 className={styles.cardhead}> Crio Winter Of Doing </h3>
+            <div className={styles.cardtext}>{str1.substring(0, 600)}...</div>
           </div>
           <div
-            className="slide-card"
+            className={styles.slidecard}
             onClick={() =>
               handleOpen(
                 str2,
@@ -168,8 +168,8 @@ export default function Owl(props) {
               )
             }
           >
-            <h3 className="card-head"> Private AI Series </h3>
-            <div className="card-text">{str2.substring(0, 600)}...</div>
+            <h3 className={styles.cardhead}> Private AI Series </h3>
+            <div className={styles.cardtext}>{str2.substring(0, 600)}...</div>
           </div>
         </OwlCarousel>
       </div>

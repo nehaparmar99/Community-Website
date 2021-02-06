@@ -1,5 +1,10 @@
-.slider-div {
+.owltheme {
+  background-color: #121f3a;
+  padding-top: 10px;
+}
+.sliderdiv {
   padding: 2em 0;
+  text-align: center;
 }
 
 .slide {
@@ -8,13 +13,28 @@
   margin: 1em auto;
   padding-top: 2em !important;
 }
-
-.carousel-head {
+.motive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.carouselhead {
   color: #121f3a !important;
   font-size: 35px !important;
 }
-
-.slide-card {
+.dash {
+  width: 250px;
+  height: 5px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  background: rgb(255, 0, 90);
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 90, 1) 0%,
+    rgba(10, 24, 61, 1) 90%
+  );
+}
+.slidecard {
   min-height: 25em;
   border-radius: 20px;
   background-color: #016795;
@@ -23,7 +43,7 @@
   padding: 1em;
 }
 
-.slide-card:hover {
+.slidecard:hover {
   background: linear-gradient(
     45deg,
     rgba(255, 0, 90, 1) 0%,
@@ -33,11 +53,11 @@
   cursor: pointer;
 }
 
-.card-head {
+.cardhead {
   text-align: center;
 }
 
-.card-text {
+.cardtext {
   margin: 1.5em 0;
   line-height: 1.5;
   text-align: center;

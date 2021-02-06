@@ -1,5 +1,5 @@
 import React from "react";
-import "./broadcast.css";
+import styles from "./broadcast.module.css";
 import Carousel from "./Carousel/Carousel";
 import { Link } from "react-router-dom";
 const Broadcasts = () => {
@@ -12,8 +12,8 @@ const Broadcasts = () => {
         <Carousel head="Previous Broadcasts" />
       </div>
       <Link to="/all-broadcasts">
-        <div className="submit-btn">
-          <button className="myb">All Broadcasts</button>
+        <div className={styles.submitbtn}>
+          <button className={styles.myb}>All Broadcasts</button>
         </div>
       </Link>
     </div>
